@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header>
       {/* top nav */}
-      <div className="flex items-center justify-between  bg-amazon_blue p-1 flex-grow py-2">
+      <div className="flex items-center justify-between bg-amazon_blue p-1 flex-grow py-2">
         {/* Logo */}
         <div className="mt-2 flex items-center md:flex-grow-0">
           <Image
