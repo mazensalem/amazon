@@ -36,9 +36,7 @@ export default function Handle(req, res) {
         from: process.env.EMAIL_FROM,
       }),
     ],
-    pages: {
-      signIn: "/signin",
-    },
+    pages: {},
     secret: "qwertyuiop;lkjhgfdxcbn",
     adapter: Adapters.Prisma.Adapter({ prisma }),
   });
