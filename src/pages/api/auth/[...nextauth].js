@@ -1,18 +1,6 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
-import Adapters from "next-auth/adapters";
-import { PrismaClient } from "@prisma/client";
 
-let prisma;
-
-if (process.env.NODE_ENV === "production") {
-  prisma = new PrismaClient();
-} else {
-  if (!global.prisma) {
-    global.prisma = new PrismaClient();
-  }
-  prisma = global.prisma;
-}
 export default function Handle(req, res) {
   return NextAuth(req, res, {
     providers: [
@@ -38,6 +26,5 @@ export default function Handle(req, res) {
     ],
     pages: {},
     secret: "qwertyuiop;lkjhgfdxcbn",
-    adapter: Adapters.Prisma.Adapter({ prisma }),
   });
 }
