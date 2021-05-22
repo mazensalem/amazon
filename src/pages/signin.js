@@ -14,28 +14,6 @@ export default function SignIn({ providers, csrfToken }) {
           <h1 className="text-yellow-500 mb-5 font-bold text-xl">
             Account Login
           </h1>
-          <div>
-            <form
-              className="flex flex-col"
-              method="POST"
-              action="/api/auth/signin/email"
-            >
-              <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
-              <label htmlFor="email">Enter Your Email</label>
-              <input
-                className="focus:outline-none bg-gray-200 px-1 rounded-sm mt-1"
-                type="text"
-                id="email"
-                name="email"
-              />
-              <input
-                type="submit"
-                className="bg-yellow-400 cursor-pointer mt-3 rounded-md"
-                value="Log In"
-                placeholder="Email"
-              />
-            </form>
-          </div>
           <div className="text-center justify-between mt-3.5 flex flex-col md:flex-row">
             {Object.values(providers).map((provider) => {
               if (provider.name === "Email") {
