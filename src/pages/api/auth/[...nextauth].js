@@ -24,7 +24,7 @@ export default function Handle(req, res) {
         from: process.env.EMAIL_FROM,
       }),
     ],
-    pages: {},
+    pages: {signIn: "/signin"},
     secret: "qwertyuiop;lkjhgfdxcbn",
   });
 }
